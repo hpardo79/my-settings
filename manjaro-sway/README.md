@@ -1,6 +1,4 @@
-# My additions and customizations in my Manjaro-Sway installation
+# My additions and customizations (Manjaro-Sway) installation
 ## Modes
-[**Powermenu**](modes/powermenu)
-New mode for system exit and shutdown options.
-The color theme is based on the Dracula theme.4
+[**Powermenu**](modes/powermenu) is a new mode for system exit and shutdown options. The colors based on the *Dracula Theme*.
 ![Mode PowerMenu](powermenu.png)
