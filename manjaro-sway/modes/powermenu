@@ -1,0 +1,33 @@
+set $mode_powermenu "\
+<span foreground='#d6d6d6'>  \
+<span foreground='#e6cd69'> </span><span foreground='#e6cd69'>[L]</span>OCK  \
+<span foreground='#55b5db'> </span>L<span foreground='#55b5db'>[O]</span>GOUT  \
+<span foreground='#9fca56'> </span><span foreground='#9fca56'>[R]</span>EBOOT  \
+<span foreground='#a074c4'>󰒲 </span>S<span foreground='#a074c4'>[U]</span>SPEND  \
+<span foreground='#Cd3f45'> </span><span foreground='#Cd3f45'>[S]</span>HUTDOWN \
+</span>"
+
+set $del_cliphist cliphist wipe || exit 0
+
+mode --pango_markup $mode_powermenu {
+    # lock
+    $bindsym l mode "default", exec $locking
+
+    # logout
+    $bindsym o exec $del_cliphist; exec swaymsg exit
+
+    # reboot
+    $bindsym r exec $del_cliphist; exec systemctl reboot
+
+    # suspend
+    $bindsym u mode "default", exec systemctl suspend
+
+    # shutdown
+    $bindsym s exec $del_cliphist; exec systemctl poweroff
+
+    # Return to default mode.
+    $bindsym Escape mode "default"
+}
+
+## Launch // Exit Menu ##
+$bindsym XF86PowerOff mode $mode_powermenu
