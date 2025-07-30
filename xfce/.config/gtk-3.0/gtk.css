@@ -1,0 +1,8 @@
+/*panel tweaks*/
+@import url("xfce4-panel-tweaks.css");
+
+/*set custom gtk3/css code below */
+
+@import url("whisker-tweak.css");
+
+@import url("my-config-panel.css");
