@@ -9,7 +9,7 @@
       <property name="position" type="string" value="p=6;x=683;y=20"/>
       <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="38"/>
+      <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="10"/>
         <value type="int" value="4"/>
@@ -38,7 +38,7 @@
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=10;x=688;y=746"/>
-      <property name="size" type="uint" value="32"/>
+      <property name="size" type="uint" value="28"/>
       <property name="length" type="double" value="100"/>
       <property name="background-style" type="uint" value="1"/>
       <property name="plugin-ids" type="array">
