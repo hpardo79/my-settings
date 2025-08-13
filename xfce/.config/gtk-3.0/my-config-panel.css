@@ -1,7 +1,7 @@
 #XfcePanelWindow { 
 	font-family: 'UbuntuSans Nerd Font';
 	font-size: 12px;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 #xfce-panel-toggle-button:checked label {
