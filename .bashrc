@@ -46,15 +46,15 @@ fi
 
 # Construcción del prompt
 build_prompt() {
-  local user_host="\[\e[30;42m\] \u@\h \[\e[0m\]"
-  local sep1="\[\e[42m\]\[\e[0m\]"
+  local user_host="\[\e[30;42m\] \u│\h \[\e[0m\]"
+  local sep1="\[\e[30;42m\]░▒▓\[\e[0m\]"
   local directory=" \[\e[1;32m\]\w\[\e[0m\]"
 
   PS1="${user_host}${sep1}${directory}"
 
   # Agregar Git si aplica
   if type __git_ps1 &>/dev/null; then
-      local git_block="\[\e[103m\]\[\e[0m\]\[\e[97;103m\]$(__git_ps1 ' %s ')\[\e[0m\]\[\e[103m\]\[\e[0m\]"
+      local git_block="\[\e[0m\]\[\e[97;104m\]$(__git_ps1 ' %s ')\[\e[0m\]"
       PS1+="$git_block"
   fi
 
@@ -65,7 +65,7 @@ PROMPT_COMMAND=build_prompt
 # Título de ventana en xterm
 case "$TERM" in
 xterm*|rxvt*) 
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u│\h: \w\a\]$PS1"
     ;;
 *) ;;
 esac
