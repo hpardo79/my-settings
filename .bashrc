@@ -54,7 +54,7 @@ build_prompt() {
 
   # Agregar Git si aplica
   if type __git_ps1 &>/dev/null; then
-      local git_block="\[\e[0m\]\[\e[97;104m\]$(__git_ps1 ' %s ')\[\e[0m\]"
+      local git_block="\[\e[30;105m\]$(__git_ps1 ' %s ')\[\e[0m\]"
       PS1+="$git_block"
   fi
 
